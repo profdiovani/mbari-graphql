@@ -1,0 +1,45 @@
+Passo 1: Subir a aplicação demo-graphql
+
+Passo 2: Acessar endpoint GraphQL http://localhost:8081/graphiql
+
+Passo 3: Executar querys
+
+#Recuperar todos os restaurantes
+{
+	recuperarListaRestaurantes{
+  		nome
+  		cnpj
+	}	
+}
+
+#Recuperar todos os restaurantes com endereco
+{
+	recuperarListaRestaurantes{
+  		nome
+  		cnpj
+    	endereco {
+    	  logradouro
+    	  numero
+    	  bairro
+    	  cidade
+    	  uf
+    	}
+	}	
+}
+
+#Recuperar um restaurante especifico
+{
+	recuperarRestaurantePorCnpj(cnpj:"789"){
+  		nome
+  		cnpj
+	}	
+}
+
+
+#Incluir um restaurante
+mutation{
+  cadastrarRestaurante(restaurante:{nome:"Restaurante ABC",cnpj:"222"}){
+    nome
+    cnpj
+  }
+}
