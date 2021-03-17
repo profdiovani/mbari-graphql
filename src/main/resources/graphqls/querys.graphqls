@@ -1,0 +1,9 @@
+type Query {
+    recuperarRestaurantePorCnpj(cnpj: String): Restaurante
+    recuperarListaRestaurantes: [Restaurante]
+}
+
+type Mutation {
+    cadastrarRestaurante(restaurante: RestauranteRequisicao!): Restaurante
+
+}

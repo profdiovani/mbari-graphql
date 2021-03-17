@@ -1,0 +1,7 @@
+type Endereco {
+    logradouro: String,
+    numero: Int,
+    bairro: String,
+    cidade: String,
+    uf: String
+}

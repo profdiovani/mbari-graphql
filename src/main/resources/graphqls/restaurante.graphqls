@@ -1,0 +1,12 @@
+type Restaurante {
+    nome: String!
+    cnpj: String!
+    endereco: Endereco,
+    itensMenu: [ItemMenu]
+}
+
+
+input RestauranteRequisicao {
+    nome: String,
+    cnpj: String!
+}

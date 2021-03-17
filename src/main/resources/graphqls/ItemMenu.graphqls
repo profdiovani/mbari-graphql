@@ -1,0 +1,4 @@
+type ItemMenu {
+    nome: String,
+    preco: Float
+}
